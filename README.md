@@ -1,7 +1,9 @@
 20 years of shootings heat map
 ==================
 
-CartoDB heat map with slider on 20 years of shootings in New York City, by Sarah Ryley and Laura Bult of New York Daily News.
+CartoDB heat map with slider on 20 years of shootings in New York City.
+
+By Laura Bult and Sarah Ryley of the New York Daily News.
 
 Map can be viewed [here](http://www.nydailynews.com/new-york/nyc-crime/bloody-weekend-19-injured-bullets-cops-arrest-2-article-1.1846552).
 
