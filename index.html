@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shootings Master Map</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <link rel="shortcut icon" href="https://cartodb.com/assets/favicon.ico" />
+        <link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/themes/css/cartodb.css" />
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+        <link rel="stylesheet" href="style.min.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+        <script type="text/javascript" src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/cartodb.js"></script>
+        <script type="text/javascript" src="js/main.min.js"></script>
+    </head>
+    <body onload="init()">
+        <div id="header" style="opacity: 1; top: 0px;">
+            <p>20 Years of Gun Violence in NYC</p>
+        </div>
+        <div id="wrapper">
+            <div id='cartodb_map'></div>
+        </div>
+        <div id="selector" style="opacity: 1; bottom: 0px;">
+            <select name="select">
+                <option value="date_1">1993</option>
+                <option value="date_2">1994</option>
+                <option value="date_3">1995</option>
+                <option value="date_4">1996</option>
+                <option value="date_5">1997</option>
+                <option value="date_6">1998</option>
+                <option value="date_7">1999</option>
+                <option value="date_8">2000</option>
+                <option value="date_9">2001</option>
+                <option value="date_10">2002</option>
+                <option value="date_11">2003</option>
+                <option value="date_12">2004</option>
+                <option value="date_13">2005</option>
+                <option value="date_14">2006</option>
+                <option value="date_15">2007</option>
+                <option value="date_16">2008</option>
+                <option value="date_17">2009</option>
+                <option value="date_18">2010</option>
+                <option value="date_19">2011</option>
+                <option value="date_20">2012</option>
+                <option value="date_21">2013</option>
+            </select>
+
+            <div class="tip" style="left:0; display: block;">Select a year to see shooting victims data by precinct.</div>
+        </div>
+        <div id="slider" style="opacity: 1; bottom: 0px;">
+            <div class="dates">
+                <div class="handle ui-draggable"><div class="handle-inner"></div></div>
+                <ul>
+                    <li class="date_1">1993</li>
+                    <li class="date_2">1994</li>
+                    <li class="date_3">1995</li>
+                    <li class="date_4">1996</li>
+                    <li class="date_5">1997</li>
+                    <li class="date_6">1998</li>
+                    <li class="date_7">1999</li>
+                    <li class="date_8">2000</li>
+                    <li class="date_9">2001</li>
+                    <li class="date_10">2002</li>
+                    <li class="date_11">2003</li>
+                    <li class="date_12">2004</li>
+                    <li class="date_13">2005</li>
+                    <li class="date_14">2006</li>
+                    <li class="date_15">2007</li>
+                    <li class="date_16">2008</li>
+                    <li class="date_17">2009</li>
+                    <li class="date_18">2010</li>
+                    <li class="date_19">2011</li>
+                    <li class="date_20">2012</li>
+                    <li class="date_21">2013</li>
+                </ul>
+            </div>
+            <div class="tip" style="left:0; display: block;">Select a year to see shooting victims data by precinct.</div>
+            <div class="date" style="left: 51px; display: none;"><span class="suffix"></span></div>
+            <div class="highlight"></div>
+            <div class="border"></div>
+            <script type="infowindow/html" id="infowindow_template">
+                <div class="cartodb-popup">
+                <a href="#close" class="cartodb-popup-close-button close">x</a>
+                <div class="cartodb-popup-content-wrapper">
+                <div class="cartodb-popup-header"></div>
+                <div class="cartodb-popup-content">
+                <!-- content.data contains the field info -->
+
+                <p>Precinct {{content.data.precinct}} - {{content.data.neighborhoods}}</p>
+                <p>{{content.data.shootings}} shooting victims in {{content.data.date}}</p>
+                </div>
+                </div>
+                <div class="cartodb-popup-tip-container"></div>
+                </div>
+            </script>
+        </div>
+    </body>
+</html>
+
+
