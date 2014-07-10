@@ -9,5 +9,5 @@ Slider is based on Andrew Hill's [NYCHenge].
 
 Data is from NYPD CompStat books from 1993 - 2013. Yes the made us enter the data into a spreadsheet by hand.
 
-[here]:(http://www.nydailynews.com/new-york/nyc-crime/bloody-weekend-19-injured-bullets-cops-arrest-2-article-1.1846552)
-[NYCHenge]:(http://nychenge.com/)
+[here]: (www.nydailynews.com/new-york/nyc-crime/bloody-weekend-19-injured-bullets-cops-arrest-2-article-1.1846552)
+[NYCHenge]: (www.nychenge.com/)
